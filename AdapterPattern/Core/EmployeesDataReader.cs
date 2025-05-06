@@ -10,7 +10,9 @@ public class EmployeesDataReader
         {
             new Employee
             {
-                FullName = "John Doe",
+                FirstName = "John",
+                SecondName = "Adam",
+                LastName = "Doe",
                 PayItems = new List<PayItem>
                 {
                     new PayItem { Name = "Salary", Value = 50000 },
@@ -21,7 +23,9 @@ public class EmployeesDataReader
             },
             new Employee
             {
-                FullName = "Jane Smith",
+                FirstName = "Jane",
+                SecondName = "Paul",
+                LastName = "Smith",
                 PayItems = new List<PayItem>
                 {
                     new PayItem { Name = "Salary", Value = 60000 },
