@@ -18,7 +18,7 @@ public class EmployeesDataReader
                     new PayItem { Name = "Salary", Value = 50000 },
                     new PayItem { Name = "Bonus", Value = 5000 },
                     new PayItem { Name = "Commission", Value = 2000 },
-                    new PayItem { Name = "Medical Insurance", Value = -450 }
+                    new PayItem { Name = "Medical Insurance", Value = 450 , IsDeduction = true }
                 }
             },
             new Employee
