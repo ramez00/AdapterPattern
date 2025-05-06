@@ -1,4 +1,5 @@
 ﻿
+using AdapterPattern.Core.Adapter;
 using PayrollSystem.Core;
 using System.Text;
 using System.Text.Json;
@@ -13,7 +14,8 @@ var client = new HttpClient();
 foreach (var employee in employees)
 {
     var request = new HttpRequestMessage(HttpMethod.Post, PayrollCalculatorUrl);
-    request.Content = new StringContent(JsonSerializer.Serialize(employee), Encoding.UTF8, "application/json");
+    var Adapter = new EmployeeAdapter(employee);
+    request.Content = new StringContent(JsonSerializer.Serialize(Adapter), Encoding.UTF8, "application/json");
   
     var response = await client.SendAsync(request);
     var responseJson = await response.Content.ReadAsStringAsync();
